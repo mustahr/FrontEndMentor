@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mobile: 375px;
+    --desktop: 1440px;
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Font-size-inputs: 32px;
+    --font-family: Poppins;
+    --Weights-1: 400;
+    --Weights-2: 700;
+    --Weights-3: 800;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Off-white);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.096),
+            white);
+    background-size: 20px 20px;
+    background-position: center center;
+    font-family: 'Poppins', sans-serif;
+    animation: anime 10s alternate-reverse;
+}
+
+@keyframes anime {
+    from {
+        background-position: 0% 100%;
+    }
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--White);
+    padding: 4rem 2rem;
+    border-radius: 1rem 1rem 6rem 1rem;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.13);
+}
+
+main .input-group {
+    display: flex;
+    gap: 20px;
+}
+
+main .input-group label {
+    color: var(--Smokey-grey);
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+main .input-group .input {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+main .input-group #month,
+main .input-group #day {
+    max-width: 70px
+}
+
+main .input-group #year {
+    max-width: 100px
+}
+
+main .input-group input {
+    color: var(--Off-black);
+    letter-spacing: 2px;
+    font-weight: 900;
+    padding: 10px 20px;
+    border: 2px solid var(--Light-grey);
+    border-radius: 10px;
+    outline: unset;
+    box-shadow: unset;
+}
+
+main .input-group input:focus {
+    border: 2px solid var(--Purple);
+}
+
+main .input-group .error,
+main .error {
+    color: var(--Light-red);
+    font-size: 12px;
+    margin-top: -5px;
+    font-weight: 800;
+}
+
+.icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
+}
+
+.icon hr {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    height: 1px;
+    background-color: var(--Purple);
+    z-index: 1;
+}
+
+.icon svg {
+    width: 100px;
+    height: auto;
+    background-color: var(--Purple);
+    padding: 20px;
+    z-index: 2;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.icon svg:hover {
+    background-color: var(--Off-black);
+}
+
+.result-outer-group {
+    width: 100%;
+}
+
+.result-outer-group .result-inner-group {
+    font-size: 40px;
+    display: flex;
+    gap: 25px;
+    font-style: italic;
+    font-weight: 900;
+    color: var(--Purple);
+}
+
+.result-outer-group .result-inner-group p {
+    color: var(--Off-black)
+}
+
+@media screen and (min-width: 700px) {
+    main {
+        min-width: 500px;
+    }
+}

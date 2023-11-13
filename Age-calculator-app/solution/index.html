@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age calculator app</title>
+</head>
+
+<body class="body">
+    <main>
+        <div class="input-group">
+            <div class="input">
+                <label for="day">DAY</label>
+                <input type="int" name="day" id="day" required placeholder="DD">
+                <div class="error" id="day-err"></div>
+            </div>
+            <div class="input">
+                <label for="month">MONTH</label>
+                <input type="int" name="month" id="month" required placeholder="MM">
+                <div class="error" id="month-err"></div>
+            </div>
+            <div class="input">
+                <label for="year">YEAR</label>
+                <input type="int" name="year" id="year" required placeholder="YYYY">
+                <div class="error" id="year-err"></div>
+            </div>
+        </div>
+        <div class="error" id="err"></div>
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44" onclick="result()">
+                <g fill="none" stroke="#FFF" stroke-width="2">
+                    <path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44" />
+                </g>
+            </svg>
+            <hr>
+        </div>
+        <div class="result-outer-group">
+            <div class="result-inner-group">
+                <div class="year-result" id="year-result">--</div>
+                <p>years</p>
+            </div>
+            <div class="result-inner-group">
+                <div id="month-result" class="month-result">--</div>
+                <p>months</p>
+            </div>
+            <div class="result-inner-group">
+                <div id="day-result" class="day-result">--</div>
+                <p>days</p>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

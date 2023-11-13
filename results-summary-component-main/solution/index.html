@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Results summary component</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="first-card">
+            <h1>
+                Your Result
+            </h1>
+            <div class="state">
+                <h3 id="resultScore">
+                    76
+                </h3>
+                <p>
+                    of 100
+                </p>
+            </div>
+
+            <h2>
+                Great
+            </h2>
+            <p>
+                You scored higher than 65% of the people who have taken these tests.
+            </p>
+        </div>
+        <div class="second-card">
+            <h2>
+                Summary
+            </h2>
+
+            <div class="data" id="summaryData">
+            </div>
+
+            <button>
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Fetch data from the JSON file
+        fetch('./data.json')
+            .then(response => response.json())
+            .then(data => {
+                // Update the result score
+                document.getElementById('resultScore').innerText = data[0].score;
+
+                // Update the summary data
+                const summaryDataContainer = document.getElementById('summaryData');
+                data.forEach(item => {
+                    const subData = document.createElement('div');
+                    subData.className = 'sub-data';
+
+                    const tag = document.createElement('div');
+                    tag.className = 'tag';
+                    const tagIcon = document.createElement('img');
+                    tagIcon.src = item.icon;
+                    tagIcon.alt = item.category;
+                    tag.appendChild(tagIcon);
+                    tag.innerHTML += item.category;
+                    subData.appendChild(tag);
+
+                    const amount = document.createElement('div');
+                    amount.className = 'amount';
+                    amount.innerHTML = `${item.score} / <span> 100 </span>`;
+                    subData.appendChild(amount);
+
+                    summaryDataContainer.appendChild(subData);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+
+</body>
+
+</html>

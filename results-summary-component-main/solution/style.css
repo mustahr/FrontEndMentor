@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@800&display=swap');
+
+:root {
+
+    --font-family: "Hanken";
+
+    --Mobile: 375px;
+    --Desktop: 1440px;
+
+
+    /* ### Primary */
+
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-red-bg: hsla(0, 100%, 67%, 0.1);
+    --Orangey-yellow-bg: hsla(39, 100%, 56%, 0.1);
+    --Green-teal-bg: hsla(166, 100%, 37%, 0.1);
+    --Cobalt-blue-bg: hsla(234, 85%, 45%, 0.1);
+
+    /* ## Gradients */
+
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+body {
+    background-color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 10px 20px 30px hsla(234, 85%, 45%, 0.171);
+    width: 700px;
+}
+
+.container .first-card {
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.container .first-card h1 {
+    font-size: 25px;
+    color: var(--Light-lavender);
+}
+
+.container .first-card .state {
+    background: linear-gradient(to bottom, var(--Violet-blue-circle), var(--Persian-blue-circle));
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.container .first-card .state h3 {
+    color: var(--White);
+    font-size: 70px;
+}
+
+.container .first-card .state p {
+    color: var(--Light-lavender);
+    opacity: .6;
+}
+
+.container .first-card h2 {
+    color: var(--White);
+    font-size: 30px;
+}
+
+.container .first-card p {
+    color: var(--Light-lavender);
+    font-size: 16px;
+    opacity: .8;
+    padding-inline: 1rem;
+    width: 300px;
+}
+
+
+
+.container .second-card {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    width: 100%;
+}
+
+.container .second-card h2 {
+    text-align: left;
+    color: var(--Dark-gray-blue);
+    font-weight: 900;
+}
+
+.container .second-card .data {
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.container .second-card .data .sub-data {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.container .second-card .data .sub-data .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container .second-card .data .sub-data:nth-child(1) {
+    background-color: var(--Light-red-bg);
+}
+
+.container .second-card .data .sub-data:nth-child(2) {
+    background-color: var(--Orangey-yellow-bg);
+}
+
+.container .second-card .data .sub-data:nth-child(3) {
+    background-color: var(--Green-teal-bg);
+}
+
+.container .second-card .data .sub-data:nth-child(4) {
+    background-color: var(--Cobalt-blue-bg);
+}
+
+
+.container .second-card .data .sub-data:nth-child(1) .tag {
+    color: var(--Light-red);
+}
+
+.container .second-card .data .sub-data:nth-child(2) .tag {
+    color: var(--Orangey-yellow);
+}
+
+.container .second-card .data .sub-data:nth-child(3) .tag {
+    color: var(--Green-teal);
+}
+
+.container .second-card .data .sub-data:nth-child(4) .tag {
+    color: var(--Cobalt-blue);
+}
+
+.container .second-card .data .sub-data .amount {
+    color: var(--Dark-gray-blue);
+}
+
+.container .second-card .data .sub-data .amount span {
+    opacity: .8;
+}
+
+
+.container button {
+    all: unset;
+    background: linear-gradient(to bottom, var(--Dark-gray-blue), var(--Dark-gray-blue));
+    width: 100%;
+    border-radius: 5rem;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--White);
+    cursor: pointer;
+    transition: background .1s ease-in;
+}
+
+.container button:hover {
+    background: linear-gradient(to bottom, var(--Light-slate-blue-background), var(--Light-royal-blue-background));
+}
+
+
+@media only screen and (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        box-shadow: unset;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container .first-card {
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .container .first-card .state {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+    }
+
+    .container .first-card .state h3 {
+        color: var(--White);
+        font-size: 45px;
+    }
+
+    .container .first-card p {
+        font-size: 12px;
+    }
+
+    .container .first-card h2 {
+        color: var(--White);
+        font-size: 25px;
+    }
+
+    .container .second-card {
+        padding: 1.5rem;
+    }
+
+    .container .second-card h2 {
+        font-size: 20px;
+    }
+}

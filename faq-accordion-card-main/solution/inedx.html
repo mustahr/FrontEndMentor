@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    
+    <div class="div">
+        <img class="box" src="./images/illustration-box-desktop.svg" alt="">
+
+        <div class="card">
+            <div class="img">
+                <img class="woman" src="./images/illustration-woman-online-desktop.svg" alt="">
+                <img class="bg" src="./images/bg-pattern-desktop.svg" alt="">
+            </div>
+            <div class="content">
+                <h1>FAQ</h1>
+                <span id="add1" onclick="row1()"><div  class="p1">How many team memebers can I invite? <img  id="row1"   src="./images/icon-arrow-down.svg" alt=""></div>
+                
+                </span>
+                <span id="add2" onclick="row2()" >
+                    <div class="p1">What is the maximuum file upload size? <img id="row2" src="./images/icon-arrow-down.svg"
+                            alt=""></div>
+                            <div class="p2">No more than 2GB. All files in you account must fit your <br>allotted storage space.</div>
+                </span>
+                <span id="add3" onclick="row3()"><div class="p1">How many team memebers can I invite? <img id="row3"  src="./images/icon-arrow-down.svg" alt=""></div></span>
+                <span id="add4" onclick="row4()"><div class="p1">How many team memebers can I invite? <img  id="row4" src="./images/icon-arrow-down.svg" alt=""></div></span>
+                <span id="add5" onclick="row5()"><div class="p1">How many team memebers can I invite? <img  id="row5" src="./images/icon-arrow-down.svg" alt=""></div></span>
+                
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function row1(){
+      document.getElementById("row1").classList.toggle("active");
+      document.getElementById("add1").classList.toggle("add");
+        }
+        
+        function row2(){
+      document.getElementById("row2").classList.toggle("active");
+      document.getElementById("add2").classList.toggle("add");
+        }
+        
+        function row3(){
+      document.getElementById("row3").classList.toggle("active");
+      document.getElementById("add3").classList.toggle("add");
+        }
+        
+        function row4(){
+      document.getElementById("row4").classList.toggle("active");
+      document.getElementById("add4").classList.toggle("add");
+        }
+        
+        function row5(){
+      document.getElementById("row5").classList.toggle("active");
+      document.getElementById("add5").classList.toggle("add");
+        }
+        
+    </script>
+</body>
+
+</html>
